@@ -46,13 +46,13 @@
         app:layout_constraintTop_toBottomOf="@+id/ETemailSIG" />
 
     <EditText
-        android:id="@+id/etPASSWORDcSIG"
+        android:id="@+id/cPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="108dp"
         android:layout_marginTop="44dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint=" Confirm Password"
         android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,5 +66,15 @@
         android:layout_marginTop="82dp"
         android:text="sign up"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPASSWORDcSIG" />
+        app:layout_constraintTop_toBottomOf="@+id/cPassword" />
+
+    <TextView
+        android:id="@+id/errortext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="191dp"
+        android:layout_marginTop="66dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btSIGNUP" />
 </androidx.constraintlayout.widget.ConstraintLayout>
