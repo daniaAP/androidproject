@@ -11,6 +11,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private DrawerLayout drawerLayout;
     TextView username , email;
+    NavigationView navigationView;
+    FirebaseAuth fauth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,11 +32,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Toolbar toolbar = findViewById(R.id.toolbar); //Ignore red line errors
         setSupportActionBar(toolbar);
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        fauth = FirebaseAuth.getInstance();
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        FirebaseUser user = fauth.getCurrentUser();
         if (user != null) {
             // User is signed in
-            username = findViewById(R.id.username_header);
-            email = findViewById(R.id.email_header);
+            View header = navigationView.getHeaderView(0);
+            username = header.findViewById(R.id.username_header);
+            email = header.findViewById(R.id.email_header);
             username.setText(user.getDisplayName());
             email.setText(user.getEmail());
         } else {
@@ -74,6 +82,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new profile()).commit();
             }
             else if(R.id.nav_logout==item.getItemId()){
+                fauth.signOut();
                 startActivity(new Intent(this,LoginActivity.class));
                 Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show();
             }
