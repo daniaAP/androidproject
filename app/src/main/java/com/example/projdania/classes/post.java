@@ -1,4 +1,4 @@
-package classes;
+package com.example.projdania.classes;
 
 import java.util.List;
 
