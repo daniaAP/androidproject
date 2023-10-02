@@ -1,4 +1,4 @@
-package ClASS;
+package com.example.projdania.ClASS;
 
 import android.provider.BaseColumns;
 

@@ -1,6 +1,7 @@
-package ClASS;
+package com.example.projdania.ClASS;
 
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 
 public class User implements SqlInterface{
 
@@ -20,28 +21,30 @@ public class User implements SqlInterface{
     }
     //endregion
 
+
+
     //region Add,Delete,Update,Select sql
     @Override
-    public boolean Add() {
-
-      return false;
+    public long Add(SQLiteDatabase db) {
+        return 0;
     }
 
     @Override
-    public boolean Delete() {
-        return false;
+    public int Delete(SQLiteDatabase db, int id) {
+        return 0;
     }
 
     @Override
-    public boolean Update() {
-        return false;
+    public int Update(SQLiteDatabase db, int id) {
+        return 0;
     }
 
     @Override
-    public Cursor Select() {
+    public Cursor Select(SQLiteDatabase db) {
         return null;
     }
-   //endregion
+
+    //endregion
 
     //region Setter and Getter
     public String getUid() {
