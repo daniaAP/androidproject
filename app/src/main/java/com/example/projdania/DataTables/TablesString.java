@@ -12,6 +12,7 @@ public class TablesString {
     public static class ProductTable implements BaseColumns {
         public static final String TABLE_PRODUCT = "Product";
         public static final String COLUMN_PRODUCT_NAME = "ProductName";
+        public static final String COLUMN_PRODUCT_PAINTERNAME = "ProductPainterName";
         public static final String COLUMN_PRODUCT_DESCRIPTION = "Description";
         public static final String COLUMN_PRODUCT_IMAGE = "ProductImage";
         public static final String COLUMN_PRODUCT_STOCK = "Stock";

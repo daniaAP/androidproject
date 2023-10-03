@@ -11,6 +11,7 @@ import com.example.projdania.DataTables.TablesString.*;
                 "CREATE TABLE " + ProductTable.TABLE_PRODUCT + " (" +
                         ProductTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                         ProductTable.COLUMN_PRODUCT_NAME + " TEXT," +
+                        ProductTable.COLUMN_PRODUCT_PAINTERNAME + " TEXT," +
                         ProductTable.COLUMN_PRODUCT_DESCRIPTION + " TEXT," +
                         ProductTable.COLUMN_PRODUCT_STOCK + " INTEGER," +
                         ProductTable.COLUMN_PRODUCT_SALEPRICE + " DOUBLE,"+

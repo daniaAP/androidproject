@@ -35,7 +35,9 @@ public class Product implements SqlInterface {
         this.prodimg=prodimg;
         this.stock=stock;
     }
-   //endregion
+
+
+    //endregion
 
     //region Add,Delete,Update,Select Sql
 
