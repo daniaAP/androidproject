@@ -16,7 +16,7 @@ import static com.example.projdania.ClASS.TablesString.ProductTable.TABLE_PRODUC
 public class Product implements SqlInterface {
 
     //region Attribute
-    protected int pid;
+    private int pid;
     protected String prodname;
     protected String proddisc;
     protected byte []prodimg;
@@ -26,8 +26,8 @@ public class Product implements SqlInterface {
     //endregion
 
     //region Constructors
-    public Product(int pid,String prodname,String proddisc,byte[] prodimg,int stock,double saleprice,double buyprice){
-        this.pid=pid;
+    public Product(String prodname,String proddisc,byte[] prodimg,int stock,double saleprice,double buyprice){
+
         this.saleprice=saleprice;
         this.buyprice=buyprice;
         this.prodname=prodname;

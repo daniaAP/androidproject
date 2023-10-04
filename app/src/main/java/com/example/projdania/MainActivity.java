@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.projdania.admin.AddProduct;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             email.setText(user.getEmail());
         } else {
             // No user is signed in
-            Intent i = new Intent(MainActivity.this,LoginActivity.class);
+            Intent i = new Intent(MainActivity.this, AddProduct.class);
             startActivity(i);
         }
 
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
             else if(R.id.nav_logout==item.getItemId()){
                 fauth.signOut();
-                startActivity(new Intent(this,LoginActivity.class));
+                startActivity(new Intent(this, LoginActivity.class));
                 Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show();
             }
             drawerLayout.closeDrawer(GravityCompat.START);
